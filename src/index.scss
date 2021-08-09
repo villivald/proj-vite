@@ -1,0 +1,103 @@
+@supports (background: paint(something)) {
+  .houdini:hover {
+    --extra-confettiNumber: 30; /* defaults to 30 */
+    --extra-confettiLengthVariance: 12; /* Defaults to 15 */
+    --extra-confettiWeightVariance: 5; /* Defaults to 4 */
+
+    background: paint(extra-confetti);
+  }
+  .underline {
+    --extra-underlineNumber: 5; /* default: 3 */
+    --extra-underlineColor: #e54b4b; /* default: black */
+    --extra-underlineSpread: 15; /* default: 20 */
+    --extra-underlineWidth: 1; /* default: 2 */
+
+    background: paint(extra-superUnderline);
+    line-height: 1.5;
+  }
+  .underline-alt {
+    --extra-underlineNumber: 5; /* default: 3 */
+    --extra-underlineColor: #e54b4b; /* default: black */
+    --extra-underlineSpread: 15; /* default: 20 */
+    --extra-underlineWidth: 1; /* default: 2 */
+
+    background: paint(extra-superUnderline);
+    line-height: 1.5;
+
+    font-family: "Mate", serif;
+    font-size: 2.5rem;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.05em;
+  }
+
+  .tesla:hover {
+    --tesla-segments: 5;
+    --tesla-angle: 45;
+    --tesla-blur: 5;
+    --tesla-width: 4;
+    --tesla-hue: 180;
+    --tesla-saturation: 100;
+    --tesla-lightness: 50;
+    background: paint(tesla-coil);
+  }
+  .tesla-alt {
+    font-family: "Mate", serif;
+    font-size: 2.5rem;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.05em;
+  }
+  .tesla-alt:hover {
+    --tesla-segments: 5;
+    --tesla-angle: 45;
+    --tesla-blur: 5;
+    --tesla-width: 4;
+    --tesla-hue: 180;
+    --tesla-saturation: 100;
+    --tesla-lightness: 50;
+    background: paint(tesla-coil);
+  }
+}
+
+:root {
+  --pos: center;
+  --size: 0;
+}
+
+a.dropdown-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-shadow: 0 3px 10px 0 rgba(#000, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+
+  a {
+    z-index: 1;
+    transition: 0.25s linear;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blog);
+    clip-path: circle(var(--size) at var(--pos));
+    transition: 0.8s linear;
+  }
+
+  &:hover {
+    a {
+      color: #fff;
+    }
+
+    &:before {
+      --size: 300px;
+    }
+  }
+}

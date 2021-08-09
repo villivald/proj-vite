@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <meta name="theme-color" content="#000000" />
+    <meta name="monetization" content="$ilp.uphold.com/jzMkjAp8m9FZ" />
+    <meta
+      name="description"
+      content="Create React App. Stories About My Journey to Become a Programmer."
+    />
+    <link
+      rel="preload"
+      href="https://fonts.gstatic.com/s/mate/v9/m8JdjftRd7WZ6zq2W6fReLQ.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <title>villivald</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Proj. Create React App Blog.",
+        "url": "https://villivald.com/",
+        "sameAs": [
+          "https://create-react-app.com/",
+          "https://twitter.com/crapp_blog",
+          "https://github.com/villivald",
+          "https://www.linkedin.com/in/maxim-villivald-4b1b311a3/",
+          "https://www.strava.com/athletes/42251423",
+          "https://t.me/create_react_app"
+        ]
+      }
+    </script>
+    <script src="https://unpkg.com/extra.css/confetti.js" defer></script>
+    <script src="https://unpkg.com/extra.css/superUnderline.js" defer></script>
+    <script>
+      (async function () {
+        if (CSS["paintWorklet"] === undefined)
+          await import("https://unpkg.com/css-paint-polyfill");
+
+        CSS.paintWorklet.addModule(
+          "https://unpkg.com/houdini-tesla/dist/worklet.js"
+        );
+      })();
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-9T3BLQCBY2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-9T3BLQCBY2");
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

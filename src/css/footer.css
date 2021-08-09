@@ -1,0 +1,16 @@
+.footer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.footer-text:focus-visible {
+  outline: lightgreen solid 2px;
+}
+
+@media only screen and (max-width: 700px) {
+  .footer-text {
+    display: none;
+  }
+}
